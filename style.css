@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    background-color: black;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+}
+header{
+    width: 1140px;
+    display: flex;
+    max-width: 80%;;
+    margin: auto;
+    height: 50px;
+    align-items: center;
+    position:relative ;
+    z-index: 100;
+}
+header a{
+    color: #eee;
+    margin-right: 40px;
+}
+header a:hover{
+    font-size: medium;
+    font-weight: 500;
+}
+.main{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.main .box1 .box2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.main .box1 .box2 img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.main .box1 .box2 .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.description{
+    font-size: medium;
+}
+.main .box1 .box2 .name{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.main .box1 .box2 .name:hover{
+    font-size: medium;
+    font-weight: bolder ;
+}
+.main .box1 .box2 .title,.main .box1 .box2 .topic{
+    font-size:5em; 
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.main .box1 .box2 .title:hover{
+font-size:7em ;
+}
+.main .box1 .box2 .topic{
+    color: #f1683a;
+}
+.main .box1 .box2 .topic:hover{
+    font-size:10em;
+}
+.main .box1 .box2 .button{
+    display: grid;
+    grid-template-columns: repeat(2,130px);
+    grid-template-rows: 40px;
+    gap:5px;
+    margin-top: 20px;
+
+}
+.main .box1 .box2 .button button{
+    border: none;
+    background-color:#eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.main .box1 .box2 .button button:hover{
+    border-radius: 20%;
+   
+}
+.main .box1 .box2 .button button:nth-child(2){
+   background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+.next{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.next .box2{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.next .box2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.next .box2 img:hover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.next .box2 .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.next .box2 .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .des{
+    font-weight: 300;
+}
+
+.arrow{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrow button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrow button:hover{
+    background-color: #fff;
+    color: #000;
+    
+}
+
+
+.main .box1 .box2:nth-child(1){
+    z-index: 1;
+}
+
+
+
+.main .box1 .box2:nth-child(1) .content .name,
+.main .box1 .box2:nth-child(1) .content .title,
+.main .box1 .box2:nth-child(1) .content .topic,
+.main .box1 .box2:nth-child(1) .content .description,
+.main .box1 .box2:nth-child(1) .content .button
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.main .box1 .box2:nth-child(1) .content .title{
+    animation-delay: 1.2s;
+}
+.main .box1 .box2:nth-child(1) .content .topic{
+    animation-delay: 1.4s;
+}
+.main .box1 .box2:nth-child(1) .content .des{
+    animation-delay: 1.6s;
+}
+.main .box1 .box2:nth-child(1) .content .buttons{
+    animation-delay: 1.8s
+}
+
+.main.Next .box1 .box2:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.main.Next .next .box2:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.main.prev .box1 .box2 img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.main.Next .next{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+
+
+.main .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.main.Next .time,
+.main.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+
+
+.main.prev .box1 .box2:nth-child(2){
+    z-index: 2;
+}
+
+.main.prev .box1 .box2:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.main.prev .next .box2:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.main.Next .arrow button,
+.main.prev .arrow button{
+    pointer-events: none;
+}
+.main.prev .box1 .box2:nth-child(2) .content .name,
+.main.prev .box1 .box2:nth-child(2) .content .title,
+.main.prev .box1 .box2:nth-child(2) .content .topic,
+.main.prev .box1 .box2:nth-child(2) .content .description,
+.main.prev .box1 .box2:nth-child(2) .content .button
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .main .box1 .box2 .content{
+        padding-right: 0;
+    }
+    .main .box1 .box2 .content .title{
+        font-size: 30px;
+    }
+}
